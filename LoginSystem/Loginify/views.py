@@ -1,22 +1,33 @@
 from django.shortcuts import render, redirect
 from .models import UserDetail
 from django.http import HttpResponse
+from .forms import SignupForm, LoginForm
+
+
 # Create your views here.
 def signup_view(request):
     if request.method == "POST":
-        username = request.POST['username']
-        email = request.POST['email']
-        password = request.POST['password']
-        if not UserDetail.objects.filter(email=email).exists():
-            UserDetail.objects.create(username=username,email=email,password=password)
+        form = SignupForm(request.POST)
+        if form.is_valid():
+            form.save()
             return redirect('login')
-    return render(request,"signup.html")
+    else:
+        form = SignupForm()
+    return render(request, "Loginify/signup.html", {'form': form})
+
 
 def login_view(request):
+    message = ""
     if request.method == "POST":
-        email = request.POST['email']
-        password = request.POST['password']
-        userValid = UserDetail.objects.filter(email=email, password=password).first()
-        if userValid:
-            return HttpResponse("Login Succeeful!!!")
-    return render(request,"login.html")
+        form = LoginForm(request.POST)
+        if form.is_valid():
+            email = form.cleaned_data['email']
+            password = form.cleaned_data['password']
+            user = UserDetail.objects.filter(email=email, password=password).first()
+            if user:
+                message = "Login Successful!"
+            else:
+                message = "Invalid credentials!"
+    else:
+        form = LoginForm()
+    return render(request, 'Loginify/login.html', {'form': form, 'message': message})
