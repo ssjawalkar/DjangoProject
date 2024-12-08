@@ -65,12 +65,3 @@ python manage.py runserver
 
 #### Django Shell
 ![image](https://github.com/user-attachments/assets/359c01b4-4187-49bb-ae4d-120a31dbe520)
-
-
-
-
-
-
-
-python -m venv env
-source env/bin/activate  # On Windows: env\Scripts\activate
