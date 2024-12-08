@@ -11,7 +11,7 @@ This Django project implements a user login system with support for user registr
   - **Create**: Add a new user via API.
   - **Read**: Retrieve all users or a specific user by `username`.
   - **Update**: Modify user details.
-  - **Delete**: Remove a user by `username` or `email`.
+  - **Delete**: Remove a user by `email`.
 
 ---
 
