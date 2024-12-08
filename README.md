@@ -23,6 +23,40 @@ This Django project implements a user login system with support for user registr
 - A code editor or IDE (e.g., VS Code, PyCharm)
 - Postman for API testing
 
+---
+
+### Screen Shots
+#### Login Page
+![image](https://github.com/user-attachments/assets/a9a1bc80-4e75-4ef2-926d-1dc301e118bd)
+
+#### Sign Up Page
+![image](https://github.com/user-attachments/assets/e6536708-cbe2-4831-a0e3-9e5743931730)
+
+
+
+#### Get Users
+![image](https://github.com/user-attachments/assets/c379f8e6-374c-4284-b1cb-cb266453334a)
+
+#### Create User 
+![image](https://github.com/user-attachments/assets/35ee854a-4ec2-4ca6-92c2-d3880c85e88b)
+
+#### Get User by UserID
+![image](https://github.com/user-attachments/assets/160e6f65-3523-45fa-9116-3c8e7fcef13f)
+
+#### Update User
+![image](https://github.com/user-attachments/assets/7876e147-4502-4b25-8796-133bf72835bb)
+
+#### Copy User
+![image](https://github.com/user-attachments/assets/a484c306-911c-47fc-b894-2055dc525eef)
+
+#### Django Shell
+![image](https://github.com/user-attachments/assets/359c01b4-4187-49bb-ae4d-120a31dbe520)
+
+
+
+
+
+
 
 python -m venv env
 source env/bin/activate  # On Windows: env\Scripts\activate
