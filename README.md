@@ -23,6 +23,20 @@ This Django project implements a user login system with support for user registr
 - A code editor or IDE (e.g., VS Code, PyCharm)
 - Postman for API testing
 
+```
+git clone
+cd DjangoLoginSystem
+
+python -m venv env
+source env/bin/activate  # On Windows: env\Scripts\activate
+
+pip install django
+
+python manage.py makemigrations
+python manage.py migrate
+
+python manage.py runserver
+```
 ---
 
 ### Screen Shots
